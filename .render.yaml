@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: telegram-pharma-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot_fixed.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your-real-telegram-token-here
